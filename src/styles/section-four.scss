@@ -1,0 +1,71 @@
+.section-four {
+    @include for-mobile-layout {
+        min-height: 302px;
+        justify-content: unset;
+
+    }
+
+    min-height: 200px;
+    background-color: $clr2;
+    background-clip: content-box;
+    box-shadow: 0 125px 0 125px $clr2;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .bgPatren {
+        @include for-mobile-layout {
+            left: -24px;
+            bottom:-15px;
+        }
+        position: absolute;
+        bottom: 0;
+        left: -122px;
+    }
+
+    div:nth-of-type(1) {
+        @include for-mobile-layout {
+            margin-top: 85px;
+            padding: 0px 10px 0px 10px;
+            flex-direction: column;
+        }
+
+        padding: 0px 135px 0px 135px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        :nth-child(1) {
+            @include for-mobile-layout {
+                font-size: 32px;
+                line-height: 32px;
+                margin-bottom: 45px;
+            }
+
+            color: $clr3;
+            font-size: 48px;
+            line-height: 48px;
+        }
+
+        :nth-child(2) {
+            @include for-mobile-layout {
+                width: 153px;
+                height: 48px;
+                padding: 0px;
+                font-size: 18px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            text-decoration: none;
+            color: $clr3;
+            border: 2px solid $clr3;
+            border-radius: 25px;
+            padding: 5px 25px 5px 25px;
+        }
+
+    }
+
+}

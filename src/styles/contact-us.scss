@@ -1,0 +1,131 @@
+.contact {
+    @include for-mobile-layout {
+        justify-content: unset;
+        min-height: 1100px;
+    }
+
+    background-color: $clr5;
+    background-clip: content-box;
+    box-shadow: 0 125px 0 125px $clr5;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    justify-content: center;
+
+    .bg-patren-bottom {
+        @include for-mobile-layout {
+            position: absolute;
+            bottom: -10px;
+            right: -260px;
+            transform: rotateY(180deg);
+            clip: rect(0px 400px 90px 230px);
+            z-index: 1;
+            display: block;
+        }
+        display: none;
+    }
+    .hero {
+        margin-top: 120px;
+        margin-bottom: 120px;
+        position: relative;
+
+        @include for-mobile-layout {
+            margin-top: 85px;
+            flex-direction: column;
+        }
+
+        .bg-patren {
+
+            position: absolute;
+            top: 0;
+            left: -225px;
+        }
+
+        div:nth-of-type(1) {
+            min-width: 50%;
+
+            @include for-mobile-layout {
+                text-align: center;
+
+                min-width: 100%;
+            }
+
+            .title:nth-child(1) {
+                @include for-mobile-layout {
+                    font-size: 40px;
+                    line-height: 60px;
+                }
+
+                font-size: 64px;
+                line-height: 100px;
+            }
+
+            .title:nth-child(2) {
+                font-size: 32px;
+                color: $clr2;
+                margin-bottom: 30px;
+            }
+
+            .card {
+                gap: 20px;
+                align-items: center;
+                margin-bottom: 20px;
+            }
+        }
+
+        div:nth-of-type(2) {
+            min-width: 50%;
+            color: #ffffff;
+            position: relative;
+
+            div:nth-child(1) {
+
+                padding-bottom: 20px;
+                border-bottom: 1px solid white;
+            }
+
+            div:not(:first-child) {
+
+                border-bottom: 1px solid white;
+                padding-bottom: 20px;
+                padding-top: 20px;
+            }
+
+            div:nth-child(5) {
+
+                padding-bottom: 60px;
+                border-bottom: 1px solid white;
+            }
+
+            input {
+                margin-left: 20px;
+                background-color: transparent;
+                border: none;
+                width: 100%;
+            }
+
+            ::placeholder {
+                color: white;
+                font-size: 15px;
+                opacity: 0.6;
+            }
+
+            .submit {
+                cursor: pointer;
+                margin-top: 25px;
+                height: 48px;
+                width: 120px;
+                border-radius: 25px;
+                color: #707070;
+                font-size: 18px;
+                font-weight: bold;
+                border: 1px solid white;
+            }
+
+       
+        }
+
+    }
+
+}

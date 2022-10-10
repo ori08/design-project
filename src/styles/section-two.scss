@@ -1,0 +1,118 @@
+.section-two {
+    @include for-mobile-layout {
+        height: 1073px;
+    }
+
+    height: 700px;
+    background-color: $clr3;
+    background-clip: content-box;
+    box-shadow: 0 125px 0 125px $clr3;
+    position: relative;
+
+
+
+    .hero {
+        @include for-mobile-layout {
+            flex-direction: column;
+            margin-top: 64px;
+        }
+
+        margin-top: 140px;
+        width: 100%;
+        display: flex;
+        color: white;
+        position: relative;
+
+        .border-top {
+
+            position: absolute;
+            min-width: 50px;
+            min-height: 5px;
+            background-color: $clr2;
+            top: 0;
+            left: 0;
+        }
+
+        section:nth-of-type(1) {
+            @include for-mobile-layout {
+                min-width: 100%;
+                font-size: 32px;
+                line-height: 32px;
+                margin-top: 40px;
+
+            }
+
+            min-width: 50%;
+            font-size: 48px;
+            line-height: 48px;
+            margin-top: 70px;
+
+        }
+
+        section:nth-of-type(2) {
+            flex: 1;
+            margin-top: 70px;
+
+            .card-info {
+                @include for-mobile-layout {
+                    flex-direction: column;
+                    text-align: center;
+                    align-items: center;
+                }
+
+                display: flex;
+                margin-bottom: 50px;
+
+                .card-info-img {
+                    @include for-mobile-layout {
+                        margin-bottom: 20px;
+                    }
+
+                    max-height: 72px;
+                    max-width: 72px;
+                    object-fit: contain;
+                }
+
+                &:nth-of-type(1) {
+                    margin-left: 7px;
+                }
+
+                div:nth-of-type(1) {
+                    @include for-mobile-layout {
+                        margin: 0px;
+                    }
+
+                    margin-left: 20px;
+                    display: flex;
+                    flex-direction: column;
+
+                    :nth-child(1) {
+                        color: $clr2;
+                        font-size: 18px;
+                    }
+
+                    :nth-child(2) {
+                        @include for-mobile-layout {
+                            margin-top: 10px;
+                            line-height: 30px;
+                        }
+
+                        margin-top: 20px;
+                        color: white;
+                        font-size: 15px;
+                        line-height: 15px;
+                    }
+
+
+                }
+            }
+        }
+
+    }
+
+    .bg-pattren {
+        position: absolute;
+        right: -225px;
+        bottom: 0;
+    }
+}

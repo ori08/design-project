@@ -1,0 +1,6 @@
+@mixin for-mobile-layout {
+    @media (max-width: $break-phone) {
+      @content;
+    }
+  }
+  

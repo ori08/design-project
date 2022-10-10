@@ -1,0 +1,232 @@
+.burger-menu {
+    position: absolute;
+    min-height: 667px;
+    min-width: 75%;
+    background-color: $clr1;
+    top: 0;
+    right: -24px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+
+    .icon {
+        margin-top: 55px;
+        margin-right: 24px;
+        margin-left: auto;
+        width: 16.25px;
+    }
+
+    .nav-link {
+        color: white;
+        margin-left: 24px;
+        margin-bottom: 30px;
+    }
+
+    .contactBtn {
+        cursor: pointer;
+        background-color: transparent;
+        height: 48px;
+        width: 160px;
+        border-radius: 25px;
+        color: white;
+        font-size: 18px;
+        border: 2px solid white;
+        align-self: center;
+
+        a {
+            color: white;
+        }
+    }
+
+    .bg-patern {
+        position: absolute;
+        bottom: 0;
+        right: -100px;
+    }
+}
+
+.section-one {
+    @include for-mobile-layout {
+        height: 567px;
+    }
+
+    height: 700px;
+    background-color: $clr5;
+    background-clip: content-box;
+    box-shadow: 0 125px 0 125px $clr5;
+    position: relative;
+
+    .bgPatren {
+        position: absolute;
+        bottom: 0;
+        right: -225px;
+    }
+
+    .bgPatren-mobile {
+        display: none;
+
+        @include for-mobile-layout {
+            display: block;
+            position: absolute;
+            bottom: -100px;
+            right: -124px;
+        }
+
+    }
+
+    .bg-patren {
+        bottom: 0;
+        top: unset;
+        position: absolute;
+        right: 0;
+
+        @include for-mobile-layout {
+            position: absolute;
+            bottom: 0;
+            left: -15px;
+            right: unset;
+        }
+    }
+
+    .main-header {
+        @include for-mobile-layout {
+            margin-top: 35px;
+            position: relative;
+        }
+
+        margin-top: 73px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-family: Livvic-SemiBold;
+        width: 100%;
+
+        div:nth-of-type(1) {
+
+            display: flex;
+            align-items: center;
+
+            .logo {
+                width: 128px;
+                height: 32px;
+            }
+
+            >* {
+                color: white;
+                text-decoration: none;
+            }
+
+            :nth-child(1) {
+                font-size: 30px;
+            }
+
+            :nth-child(2),
+            :nth-child(3) {
+                @include for-mobile-layout {
+                    display: none;
+                }
+            }
+        }
+
+        div:nth-of-type(2) {
+            @include for-mobile-layout {
+                display: none;
+            }
+
+            min-width: 153px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid white;
+            border-radius: 35px;
+
+            >* {
+                color: white;
+                text-decoration: none;
+                font-size: 18px;
+            }
+        }
+
+        .burger-icon {
+            @include for-mobile-layout {
+                cursor: pointer;
+                display: block;
+            }
+
+            display: none;
+        }
+
+
+
+    }
+
+    .main-contact {
+        @include for-mobile-layout {
+            flex-direction: column;
+            text-align: center;
+            margin-top: 90px;
+        }
+
+        display: flex;
+        margin-top: 130px;
+        position: relative;
+
+        .bg-patrens {
+            position: absolute;
+            top: 0;
+            left: -225px;
+        }
+
+        p:nth-of-type(1) {
+            @include for-mobile-layout {
+                width: 100%;
+                font-size: 40px;
+                line-height: 40px;
+            }
+
+            width: 57.72%;
+            color: white;
+            font-size: 100px;
+            line-height: 100px;
+            margin: 0px;
+
+            span {
+                color: $clr2;
+            }
+        }
+
+        p:nth-of-type(2) {
+            @include for-mobile-layout {
+                padding: 0px;
+                margin-top: 20px;
+                font-size: 15px;
+            }
+
+            flex: 1;
+            color: white;
+            padding-left: 30px;
+            font-size: 18px;
+            line-height: 25px;
+            margin-top: 75px;
+        }
+
+        .border-top {
+            @include for-mobile-layout {
+                display: none;
+            }
+
+            position: absolute;
+            min-width: 50px;
+            min-height: 5px;
+            background-color: $clr4;
+            top: 0;
+            left: calc(57.72% + 30px);
+        }
+
+
+
+    }
+
+}

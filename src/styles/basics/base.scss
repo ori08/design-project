@@ -1,0 +1,58 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Bahnschrift, sans-serif;
+    color: $clr3;
+    line-height: 1.8;
+    line-height: lh(26px);
+
+    @media (max-width: 1300px) {
+        font-size: 13px;
+    }
+}
+
+p {
+    margin: 0px;
+}
+
+
+.App {
+    @include for-mobile-layout {
+        padding: 0px 24px 0px 24px;
+    }
+    width: 100vw;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    padding: 0px 125px 0px 125px;
+    background-clip:border-box;
+    
+}
+
+.home,
+.about,
+.contact {
+    
+    display: flex;
+    margin: 0px;
+    flex-direction: column;
+}
+
+a {
+    text-decoration: none;
+}
+.dark-screen{
+    position: fixed;
+    height: 100%;
+    width: 100%; 
+    top:0;
+    left:0;
+    z-index: 1;
+    background-color: black;
+    opacity: 0.5;
+    filter: grayscale(1);
+    // display: none;
+}

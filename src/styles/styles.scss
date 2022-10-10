@@ -1,0 +1,17 @@
+@import 'setup/variables';
+@import 'setup/mixins';
+@import 'setup/functions';
+@import 'setup/typography';
+// BASICS
+@import 'basics/helpers';
+@import 'basics/base';
+@import 'basics/layout';
+//CMP
+@import 'header.scss';
+@import 'section-two.scss';
+@import 'section-three.scss';
+@import 'section-four.scss';
+@import 'footer.scss';
+@import 'about.scss';
+@import 'contact-us.scss';
+

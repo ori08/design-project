@@ -1,0 +1,245 @@
+//Section One
+
+.about-section-one {
+    display: flex;
+    margin-top: 130px;
+    position: relative;
+
+    @include for-mobile-layout {
+        margin-top: 70px;
+        flex-direction: column;
+    }
+
+    p:nth-of-type(1) {
+        @include for-mobile-layout {
+            width: 100%;
+            font-size: 40px;
+            line-height: 40px;
+            text-align: center;
+        }
+
+        width: 31.82%;
+        color: white;
+        font-size: 100px;
+        line-height: 70px;
+        margin: 0px;
+
+        span {
+            color: $clr2;
+        }
+    }
+
+    p:nth-of-type(2) {
+        @include for-mobile-layout {
+            margin-top: 10px;
+            padding: 0px;
+            text-align: center;
+        }
+
+        flex: 1;
+        color: white;
+        padding-left: 30px;
+        font-size: 18px;
+        line-height: 25px;
+        margin-top: 75px;
+    }
+
+    .border-top {
+        @include for-mobile-layout {
+            display: none;
+        }
+
+        position: absolute;
+        min-width: 50px;
+        min-height: 5px;
+        background-color: $clr2;
+        top: 0;
+        left: calc(31.82% + 30px);
+    }
+}
+
+// Section Two
+
+.about-section-two {
+    @include for-mobile-layout {
+        min-height: 2062px;
+    }
+
+    min-height: 1002px;
+    background-color: #004047;
+    position: relative;
+    background-clip: content-box;
+    box-shadow: 0 125px 0 125px #004047;
+
+.bg-patren-mobile{
+    display: none;
+    @include for-mobile-layout {
+     display: block;
+    }
+    position: absolute;
+    top:-100px;
+    left:-124px;
+    clip: rect(100px 200px 200px 100px);
+
+    &:nth-of-type(2){
+        top: unset;
+        left: unset;
+        right: -24px;
+        bottom: 0;
+        clip:unset;
+    }
+}
+
+    .hero {
+        @include for-mobile-layout {
+            margin-top: 90px;
+        }
+
+        margin-top: 140px;
+        color: white;
+
+        .header {
+            @include for-mobile-layout {
+                font-size: 32px;
+            }
+
+            font-size: 48px;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .cards {
+            @include for-mobile-layout {
+                display: flex;
+                flex-direction: column;
+                max-width: 100%;
+                grid-gap: 50px 0px;
+
+            }
+
+            max-width: calc(100% - 60px);
+            display: grid;
+            grid-template-columns: 33.3% 33.3% 33.3%;
+            grid-gap: 80px 30px;
+
+            .card {
+
+                position: relative;
+                background-color: $clr6;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                min-height: 250px;
+                text-align: center;
+
+                .icon {
+                    cursor: pointer;
+                    position: absolute;
+                    padding: 20px;
+                    border-radius: 50%;
+                    background-color: $clr2;
+                    bottom: -25px;
+
+                    &:nth-of-type(1) {
+                        background-color: $clr4;
+                    }
+                }
+
+
+                .profile-img {
+                    margin-top: 30px;
+                    margin-bottom: 20px;
+                    width: 96px;
+                    height: 96px;
+                    border-radius: 50%;
+                }
+
+                p:nth-of-type(1) {
+                    color: $clr4;
+                }
+            }
+
+        }
+
+    }
+
+}
+
+// Section Three
+
+.about-section-three {
+    @include for-mobile-layout {
+        min-height: 632px;
+    }
+
+    min-height: 437px;
+    background-color: $clr6;
+    position: relative;
+    background-clip: content-box;
+    box-shadow: 0 125px 0 125px $clr6;
+    text-align: center;
+
+    .bg-patren {
+        @include for-mobile-layout {
+            left: -124px;
+            top: -100px;
+            transform: rotateY(360deg);
+            transform: rotateX(360deg);
+
+            clip: rect(100px 200px 200px 100px)
+        }
+
+        top: 0;
+        position: absolute;
+        left: -125px;
+    }
+
+    p:nth-child(1) {
+        @include for-mobile-layout {
+            font-size: 32px;
+            margin-top: 80px;
+
+        }
+
+        margin-top: 140px;
+        margin-bottom: 50px;
+        font-size: 48px;
+        color: white;
+    }
+
+    .lines {
+        display: flex;
+
+        @include for-mobile-layout {
+            flex-direction: column;
+            align-items: center;
+            gap: 55px;
+        }
+
+        .border-top {
+            @include for-mobile-layout {
+            margin: 0;
+            }
+            margin-right: 80px;
+            background-color: white;
+            &:nth-child(1),
+            &:nth-child(4) {
+                height: 28px;
+                width: 165px;
+            }
+            &:nth-child(2) {
+                height: 23px;
+                width: 184px;
+            }
+            &:nth-child(3) {
+                height: 28px;
+                width: 180px;
+            }
+            &:nth-child(5) {
+                height: 45px;
+                width: 98px;
+                margin-right: 0px;
+            }
+        }
+    }
+}

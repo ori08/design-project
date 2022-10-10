@@ -1,0 +1,115 @@
+.section-three {
+    @include for-mobile-layout {
+        min-height: 1410px;
+    }
+
+    min-height: 700px;
+    background-color: $clr5;
+    background-clip: content-box;
+    box-shadow: 0 125px 0 125px $clr5;
+    position: relative;
+
+    .bgPattren:nth-of-type(2) {
+        @include for-mobile-layout {
+            right: -24px;
+        }
+        bottom: -100px;
+        right: -125px;
+        position: absolute;
+    }
+
+    .bgPattren:nth-of-type(1) {
+        @include for-mobile-layout {
+            left: -24px;
+        }
+
+        top: 0;
+        left: -125px;
+        position: absolute;
+    }
+
+
+    .hero {
+        margin: 140px 0px 140px 0px;
+        width: 100%;
+        display: flex;
+        color: white;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+
+        .card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+
+            .icon-quotes {
+                position: absolute;
+                top: 0;
+            }
+        }
+
+        .header {
+            @include for-mobile-layout {
+                text-align: start;
+                font-size: 32px;
+                line-height: 32px;
+            }
+
+            font-size: 48px;
+            line-height: 48px;
+
+            span {
+                color: $clr4;
+            }
+        }
+
+        section:nth-of-type(1) {
+            @include for-mobile-layout {
+                flex-direction: column;
+            }
+
+            display: flex;
+            text-align: center;
+            margin-top: 50px;
+
+            p:nth-child(1) {
+                @include for-mobile-layout {
+                font-size: 15px;
+                text-align: center;
+                }
+                margin-top: 30px;
+                z-index: 1;
+            }
+
+            p:nth-child(2) {
+                text-align: center;
+                margin-top: 30px;
+                font-size: 18px;
+                color: $clr4;
+            }
+
+            p:nth-child(3) {
+                text-align: center;
+            }
+
+            .profile-pic {
+                @include for-mobile-layout {
+                    margin-top: 10px;
+                    margin-bottom: 45px;
+
+                }
+                margin-top: 30px;
+                width: 62px;
+                height: 62px;
+                object-fit: contain;
+                border: 2.5px solid $clr4;
+                border-radius: 50%;
+            }
+
+
+        }
+    }
+}
